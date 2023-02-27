@@ -11,5 +11,4 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN make unzip ; \
-    make -j4 start-zookeeper start-server
+CMD make unzip; make -j4 start-zookeeper start-server; make create-topic
